@@ -1,35 +1,28 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-CH">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdminIT — Cybersécurité et support informatique · La Chaux-de-Fonds</title>
+<title>AdminIT · Cybersécurité et support informatique · La Chaux-de-Fonds</title>
 <meta name="description" content="Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région neuchâteloise. Un seul interlocuteur, des réponses claires.">
-<link rel="canonical" href="https://adminit.support/">
 <meta name="theme-color" content="#FAFAF8">
-
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/outfit-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CH">
-<meta property="og:site_name" content="AdminIT">
-<meta property="og:title" content="AdminIT — Cybersécurité et support informatique">
-<meta property="og:description" content="Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région neuchâteloise. Un seul interlocuteur, des réponses claires.">
+<meta property="og:title" content="AdminIT · Cybersécurité et support informatique">
+<meta property="og:description" content="L’informatique de votre entreprise, entre de bonnes mains. Basés à La Chaux-de-Fonds.">
 <meta property="og:url" content="https://adminit.support/">
-<meta property="og:image" content="https://adminit.support/assets/og-image.png">
+<meta property="og:site_name" content="AdminIT">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Logo AdminIT — Cybersécurité · Support informatique">
+<link rel="canonical" href="https://adminit.support/">
+<meta property="og:image" content="https://adminit.support/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
-<script src="script.js" defer></script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +34,6 @@
   "logo": "https://adminit.support/assets/logo-adminit.png",
   "image": "https://adminit.support/assets/og-image.png",
   "email": "info@adminit.support",
-  "telephone": "[+41 XX XXX XX XX]",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rue de la Reuse 11",
@@ -55,275 +47,175 @@
 </script>
 </head>
 <body>
-<a class="skip-link" href="#contenu">Aller au contenu</a>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="AdminIT — retour en haut de page">
-      <img src="assets/logo-adminit.png" alt="AdminIT" width="153" height="30">
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
-    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-      <a href="#services">Services</a>
-      <a href="#approche">Approche</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-dark" href="#contact">Demander un audit</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="AdminIT, retour en haut"><img src="assets/logo-mark.svg" alt="AdminIT" width="186" height="38"></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="lk" href="#services">Services</a>
+      <a class="lk" href="#methode">Méthode</a>
+      <a class="lk" href="#local">Qui sommes-nous</a>
+      <a class="btn btn-p" href="#contact">Audit gratuit</a>
     </nav>
   </div>
 </header>
 
 <main id="contenu">
 
-<section id="top" class="container hero">
-  <div class="hero-copy">
-    <p class="hero-tag reveal d1">
-      <span class="pulse-dot" aria-hidden="true"></span>
-      <span>Services informatiques · Neuchâtel</span>
-    </p>
-    <h1 class="hero-title reveal d2">L'informatique de votre entreprise, entre de bonnes mains.</h1>
-    <p class="hero-lead reveal d3">Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région. Un seul interlocuteur, des réponses claires.</p>
-    <div class="hero-actions reveal d4">
-      <a class="btn btn-accent btn-lg" href="#contact">Demander un audit gratuit
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a class="btn btn-outline btn-lg" href="#services">Voir nos services</a>
-    </div>
-  </div>
-
-  <figure class="status-card reveal d5" aria-label="Exemple d'état d'un parc informatique">
-    <div class="status-scan" aria-hidden="true"></div>
-    <div class="status-bar">
-      <div class="status-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-      <figcaption class="status-caption">état du parc — exemple</figcaption>
-    </div>
-    <div class="status-summary">
-      <span class="status-summary-label">Protection globale</span>
-      <div class="status-summary-value">
-        <span>Sous contrôle</span>
-        <span class="cursor" aria-hidden="true"></span>
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <h1 id="h-hero">L’informatique de votre entreprise, entre de <span class="mk">bonnes mains</span>.</h1>
+      <p class="lead">Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région neuchâteloise. Un seul interlocuteur, des réponses claires.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="#contact">Demander un audit gratuit <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-s" href="#services">Voir nos services</a>
       </div>
     </div>
-    <svg class="status-chart" viewBox="0 0 440 110" width="100%" height="110" preserveAspectRatio="none" aria-hidden="true">
-      <path class="chart-line" d="M0 80 C 40 78, 60 60, 100 64 S 160 40, 200 46 S 260 30, 300 34 S 370 20, 440 22" fill="none" stroke-width="2"/>
-      <line class="chart-base" x1="0" y1="96" x2="440" y2="96" stroke-width="1"/>
-    </svg>
-    <ul class="status-list">
-      <li class="status-row">
-        <span class="status-label"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5 2.5 4v4c0 3.2 2.4 5.6 5.5 6.5 3.1-.9 5.5-3.3 5.5-6.5V4L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Pare-feu</span>
-        <span class="status-value status-value--ok">ACTIF</span>
-      </li>
-      <li class="status-row status-row--stack">
-        <div class="status-row-head">
-          <span class="status-label"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><ellipse cx="8" cy="4" rx="5.5" ry="2" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 4v8c0 1.1 2.5 2 5.5 2s5.5-.9 5.5-2V4M2.5 8c0 1.1 2.5 2 5.5 2s5.5-.9 5.5-2" stroke="currentColor" stroke-width="1.3"/></svg>Sauvegarde chiffrée</span>
-          <span class="status-value">EN COURS</span>
-        </div>
-        <div class="progress" aria-hidden="true"><div class="progress-bar"></div></div>
-      </li>
-      <li class="status-row">
-        <span class="status-label"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 14h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Postes à jour</span>
-        <span class="status-value status-value--ok">OK</span>
-      </li>
-      <li class="status-row">
-        <span class="status-label"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.3"/></svg>Certificat SSL</span>
-        <span class="status-value status-value--ok">VALIDE</span>
-      </li>
-    </ul>
-  </figure>
-</section>
-
-<!-- RÉFÉRENCES — masqué en attendant de vrais logos clients.
-     Pour l'afficher : supprimer cette ligne et la ligne « FIN RÉFÉRENCES » plus bas,
-     puis remplacer chaque [Logo client] par <img src="assets/clients/nom.png" alt="Nom du client">.
-<section class="trust" aria-label="Références">
-  <div class="container trust-inner">
-    <p class="trust-label reveal">Ils nous font confiance</p>
-    <ul class="trust-logos reveal">
-      <li class="trust-logo">[Logo client]</li>
-      <li class="trust-logo">[Logo client]</li>
-      <li class="trust-logo">[Logo client]</li>
-      <li class="trust-logo">[Logo client]</li>
-      <li class="trust-logo">[Logo client]</li>
-    </ul>
-  </div>
-</section>
-FIN RÉFÉRENCES -->
-<hr class="section-divider">
-
-<section id="services" class="container section">
-  <div class="section-head">
-    <div class="section-title reveal">
-      <span class="eyebrow">01 — Services</span>
-      <h2 class="h2">Tout ce dont votre entreprise a besoin pour travailler sereinement.</h2>
+    <div class="hero-ill">
+      <svg viewBox="0 30 800 700" role="img" aria-label="Un écran verrouillé par le cadenas AdminIT, et un post-it de mot de passe froissé dans la corbeille">
+        <ellipse cx="400" cy="702" rx="250" ry="15" fill="#E7E7E2"/>
+        <ellipse cx="78" cy="703" rx="66" ry="10" fill="#E7E7E2"/>
+        <path d="M362 545 L348 664 H452 L438 545 Z" fill="#FFFFFF" stroke="#111827" stroke-width="10" stroke-linejoin="round"/>
+        <rect x="268" y="656" width="264" height="34" rx="17" fill="#FFFFFF" stroke="#111827" stroke-width="10"/>
+        <rect x="90" y="140" width="620" height="410" rx="34" fill="#111827"/>
+        <rect x="122" y="172" width="556" height="346" rx="14" fill="#FAFAF8"/>
+        <circle cx="400" cy="156" r="5" fill="#3A4252"/>
+        <g transform="translate(400 286) scale(.66) translate(-217 -296)">
+          <path class="shk" d="M182.5 276 V259 A33.5 33.5 0 0 1 249.5 259 V276" fill="none" stroke="#0E7C70" stroke-width="13" stroke-linecap="round"/>
+          <rect x="158.25" y="277.25" width="117.5" height="89.5" rx="17" fill="#FAFAF8" stroke="#0E7C70" stroke-width="12.5"/>
+          <circle cx="216" cy="315" r="9" fill="#0E7C70"/><rect x="211" y="315" width="10" height="29" rx="5" fill="#0E7C70"/>
+        </g>
+        <g class="ok">
+          <rect x="262" y="384" width="276" height="58" rx="29" fill="#EAF4F1"/>
+          <circle cx="295" cy="413" r="16" fill="#0E7C70"/>
+          <path d="M287 413.5 L292.5 419 L303 407.5" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="322" y="421" font-size="23" font-weight="600" fill="#111827">Accès sécurisé</text>
+        </g>
+        <g transform="translate(78 572) rotate(-18)">
+          <path d="M-42 -12 L-30 -38 L-4 -46 L20 -38 L40 -20 L46 6 L34 32 L8 44 L-18 40 L-38 26 L-46 4 Z" fill="#FFD54A"/>
+          <path d="M-30 -10 L-8 -2 L4 -26 M-8 -2 L-12 24 M4 -26 L28 -6 L12 18 M28 -6 L44 4" fill="none" stroke="#D29E10" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(78 700)">
+          <path d="M-52 -116 H52 L42 0 H-42 Z" fill="#FFFFFF" stroke="#111827" stroke-width="10" stroke-linejoin="round"/>
+          <path d="M-20 -92 L-16 -22 M0 -92 V-22 M20 -92 L16 -22" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+          <rect x="-62" y="-134" width="124" height="22" rx="9" fill="#FFFFFF" stroke="#111827" stroke-width="9"/>
+        </g>
+      </svg>
     </div>
-    <p class="section-intro reveal">Quatre métiers, une même exigence : des systèmes fiables, sécurisés et compris par ceux qui les utilisent.</p>
-  </div>
-
-  <div class="services-grid reveal">
-    <a class="svc" href="#contact">
-      <div class="svc-top">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4.5 6.5v7c0 5.6 4 9.8 9.5 11.5 5.5-1.7 9.5-5.9 9.5-11.5v-7L14 2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path class="ico-accent" d="m10 14 3 3 5-6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="svc-num">01</span>
-      </div>
-      <h3 class="svc-title">Cybersécurité</h3>
-      <p class="svc-text">Audit de vulnérabilités, pare-feu, antivirus géré, sauvegardes chiffrées et sensibilisation de vos équipes.</p>
-      <span class="svc-more">En savoir plus <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
-
-    <a class="svc" href="#contact">
-      <div class="svc-top">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 24h9M14 19.5V24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="ico-accent" d="M8 12h12" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <span class="svc-num">02</span>
-      </div>
-      <h3 class="svc-title">Postes de travail</h3>
-      <p class="svc-text">Installation, configuration et maintenance de vos ordinateurs, imprimantes et réseau, au bureau ou à distance.</p>
-      <span class="svc-more">En savoir plus <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
-
-    <a class="svc" href="#contact">
-      <div class="svc-top">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="4" y="4" width="20" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="16" width="20" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><circle class="ico-accent-fill" cx="8.5" cy="8" r="1.3"/><circle class="ico-accent-fill" cx="8.5" cy="20" r="1.3"/></svg>
-        <span class="svc-num">03</span>
-      </div>
-      <h3 class="svc-title">Hébergement</h3>
-      <p class="svc-text">Serveurs, e-mails professionnels et noms de domaine, surveillés et maintenus pour vous.</p>
-      <span class="svc-more">En savoir plus <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
-
-    <a class="svc" href="#contact">
-      <div class="svc-top">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="5" width="22" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h22" stroke="currentColor" stroke-width="1.6"/><path class="ico-accent" d="m11 14-3 2.5 3 2.5M17 14l3 2.5-3 2.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="svc-num">04</span>
-      </div>
-      <h3 class="svc-title">Sites web</h3>
-      <p class="svc-text">Sites vitrines rapides, sobres et faciles à mettre à jour, conçus pour inspirer confiance dès la première visite.</p>
-      <span class="svc-more">En savoir plus <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
   </div>
 </section>
 
-<section id="approche" class="approach">
-  <div class="container section approach-inner">
-    <div class="approach-intro reveal">
-      <span class="eyebrow">02 — Approche</span>
-      <h2 class="h2">Une méthode simple, en trois étapes.</h2>
-      <p class="text-lead">Pas de jargon, pas de surprise. Vous savez toujours ce que nous faisons et pourquoi.</p>
+<section class="sec" id="services" aria-labelledby="h-services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-services">Ce qu’on fait pour vous</h2>
+      <p>Quatre métiers, une même exigence : des systèmes fiables, sécurisés et compris par ceux qui les utilisent.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M33 44 V34 A17 17 0 0 1 67 34 V44" fill="none" stroke="#0E7C70" stroke-width="7" stroke-linecap="round"/><rect x="21" y="44" width="58" height="44" rx="10" fill="none" stroke="#111827" stroke-width="7"/><circle cx="50" cy="62" r="5" fill="#0E7C70"/><rect x="47.5" y="62" width="5" height="13" rx="2.5" fill="#0E7C70"/></svg></span>
+        <h3>Cybersécurité</h3>
+        <p>Audit de vulnérabilités, pare-feu, antivirus géré, sauvegardes chiffrées et sensibilisation de vos équipes.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="18" y="22" width="64" height="44" rx="6" fill="none" stroke="#111827" stroke-width="7"/><path d="M8 78 H92" stroke="#111827" stroke-width="7" stroke-linecap="round"/><path d="M33 44 H67" stroke="#0E7C70" stroke-width="7" stroke-linecap="round"/></svg></span>
+        <h3>Postes de travail</h3>
+        <p>Installation, configuration et maintenance de vos ordinateurs, imprimantes et réseau, au bureau ou à distance.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="16" width="68" height="30" rx="8" fill="none" stroke="#111827" stroke-width="7"/><rect x="16" y="56" width="68" height="30" rx="8" fill="none" stroke="#111827" stroke-width="7"/><circle cx="31" cy="31" r="4.5" fill="#0E7C70"/><circle cx="31" cy="71" r="4.5" fill="#0E7C70"/><path d="M50 31 H70 M50 71 H70" stroke="#111827" stroke-width="6" stroke-linecap="round"/></svg></span>
+        <h3>Hébergement</h3>
+        <p>Serveurs, e-mails professionnels et noms de domaine, surveillés et maintenus pour vous.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="16" width="80" height="62" rx="8" fill="none" stroke="#111827" stroke-width="7"/><path d="M10 34 H90" stroke="#111827" stroke-width="7"/><path d="M58 50 L58 88 L66.5 80 L72.5 92 L79 89 L73 77 L84 77 Z" fill="#0E7C70" stroke="#EAF4F1" stroke-width="4" stroke-linejoin="round"/></svg></span>
+        <h3>Sites web</h3>
+        <p>Sites vitrines rapides, sobres et faciles à mettre à jour, conçus pour inspirer confiance dès la première visite.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="methode" aria-labelledby="h-methode" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-methode">Une méthode simple, en trois étapes</h2>
+      <p>Pas de jargon, pas de surprise. Vous savez toujours ce que nous faisons et pourquoi.</p>
     </div>
     <ol class="steps">
-      <li class="step reveal">
-        <span class="step-num">01</span>
-        <div class="step-body">
-          <h3 class="step-title">Audit</h3>
-          <p class="step-text">Nous faisons l'état des lieux de votre parc informatique et de vos risques, puis vous remettons un rapport clair.</p>
-        </div>
-      </li>
-      <li class="step reveal">
-        <span class="step-num">02</span>
-        <div class="step-body">
-          <h3 class="step-title">Mise en place</h3>
-          <p class="step-text">Nous sécurisons, installons et configurons, en limitant l'impact sur votre activité.</p>
-        </div>
-      </li>
-      <li class="step reveal">
-        <span class="step-num">03</span>
-        <div class="step-body">
-          <h3 class="step-title">Suivi</h3>
-          <p class="step-text">Un interlocuteur direct, des interventions rapides et une maintenance continue de vos systèmes.</p>
-        </div>
-      </li>
+      <li class="step"><span class="n" aria-hidden="true">1</span><h3>Audit</h3><p>Nous faisons l’état des lieux de votre parc informatique et de vos risques, puis vous remettons un rapport clair.</p></li>
+      <li class="step"><span class="n" aria-hidden="true">2</span><h3>Mise en place</h3><p>Nous sécurisons, installons et configurons, en limitant l’impact sur votre activité.</p></li>
+      <li class="step"><span class="n" aria-hidden="true">3</span><h3>Suivi</h3><p>Un interlocuteur direct, des interventions rapides et une maintenance continue de vos systèmes.</p></li>
     </ol>
   </div>
 </section>
 
-<section id="engagements" class="engagements">
-  <div class="container section engagements-inner">
-    <div class="engagements-head reveal">
-      <span class="eyebrow">03 — Engagements</span>
-      <h2 class="h2">Ce sur quoi vous pouvez compter.</h2>
+<section class="sec local" id="local" aria-labelledby="h-local">
+  <div class="wrap">
+    <div>
+      <h2 id="h-local">Basés à La Chaux-de-Fonds, on vient <span class="mk">chez vous</span>.</h2>
+      <ul class="vals">
+        <li><span class="vi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="#111827" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" stroke="#0E7C70" stroke-width="1.8"/></svg></span><div><h3>Local</h3><p>Nous nous déplaçons dans vos locaux quand il le faut.</p></div></li>
+        <li><span class="vi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.5" stroke="#111827" stroke-width="1.8"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.3c1.8.9 3 2.9 3 5.7" stroke="#0E7C70" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h3>Direct</h3><p>Vous parlez à ceux qui font le travail. Pas de centrale d’appels, pas d’intermédiaire.</p></div></li>
+        <li><span class="vi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#111827" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#0E7C70" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h3>Transparent</h3><p>Devis annoncé avant chaque intervention et explications sans jargon.</p></div></li>
+      </ul>
     </div>
-    <ul class="pillars">
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle class="ico-accent" cx="12" cy="9.5" r="2.5" stroke-width="1.6"/></svg>
-        <h3>Local</h3>
-        <p>Basés à La Chaux-de-Fonds, nous nous déplaçons chez vous quand il le faut.</p>
-      </li>
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="ico-accent" d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.3c1.8.9 3 2.9 3 5.7" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <h3>Direct</h3>
-        <p>Vous parlez à ceux qui font le travail. Pas de centrale d'appels, pas d'intermédiaire.</p>
-      </li>
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path class="ico-accent" d="M8 8h8M8 12h8M8 16h5" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <h3>Transparent</h3>
-        <p>Devis annoncé avant chaque intervention et explications sans jargon.</p>
-      </li>
-    </ul>
-    <!-- TÉMOIGNAGE — masqué en attendant un vrai avis client. Pour l'afficher, retirer les balises de commentaire.
-    <figure class="testimonial reveal">
-      <blockquote>« [Témoignage d'un client satisfait, une ou deux phrases sur le sérieux et la réactivité.] »</blockquote>
-      <figcaption>[Prénom Nom] — [Entreprise, ville]</figcaption>
-    </figure>
-    -->
+    <div class="van">
+      <svg viewBox="-40 80 980 430" role="img" aria-label="La camionnette AdminIT">
+        <line x1="-40" y1="484" x2="940" y2="484" stroke="#C9DED9" stroke-width="8" stroke-linecap="round"/>
+        <ellipse cx="452" cy="487" rx="390" ry="12" fill="#D5E8E3"/>
+        <path d="M70 410 V150 Q70 96 124 96 H566 Q606 96 632 124 L734 238 Q812 250 832 300 V410 Q832 428 814 428 H88 Q70 428 70 410 Z" fill="#0E7C70" stroke="#111827" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M590 128 Q606 128 618 142 L700 236 H590 Z" fill="#CBE6E1" stroke="#111827" stroke-width="8" stroke-linejoin="round"/>
+        <rect x="430" y="128" width="124" height="108" rx="14" fill="#CBE6E1" stroke="#111827" stroke-width="8"/>
+        <path d="M572 128 V412" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+        <rect x="530" y="262" width="28" height="10" rx="5" fill="#111827"/>
+        <rect x="802" y="298" width="24" height="30" rx="8" fill="#FFD54A" stroke="#111827" stroke-width="6"/>
+        <rect x="796" y="372" width="54" height="28" rx="10" fill="#FFFFFF" stroke="#111827" stroke-width="7"/>
+        <rect x="52" y="372" width="40" height="28" rx="10" fill="#FFFFFF" stroke="#111827" stroke-width="7"/>
+        <g transform="translate(104 286) scale(.5) translate(-146 -214)"><path d="M182.5 276 V259 A33.5 33.5 0 0 1 249.5 259 V276" fill="none" stroke="#FAFAF8" stroke-width="13" stroke-linecap="round"/><rect x="158.2" y="277.2" width="117.5" height="89.5" rx="17" fill="none" stroke="#FAFAF8" stroke-width="12.5"/><circle cx="216" cy="315" r="9" fill="#FAFAF8"/><rect x="211" y="315" width="10" height="29" rx="5" fill="#FAFAF8"/><g fill="#FAFAF8" fill-rule="evenodd"><path d="M337.2 352.8C337.1 352.7 337 352.3 337 352C337 351.5 337.1 351.3 337.5 351C337.9 350.7 338 350.5 338 350C338 349.5 338.1 349.3 338.5 349C339 348.7 339 348.6 339 347.6C339 346.5 339 346.5 339.7 345.9C339.9 345.7 340 345.4 340 345C340 344.5 340.1 344.3 340.5 344C341 343.7 341 343.6 341 342.6C341 341.7 341.1 341.6 341.5 341.2C341.9 340.8 342 340.6 342 340C342 339.5 342.1 339.3 342.5 339C342.9 338.7 343 338.5 343 338C343 337.5 343.1 337.3 343.5 337C344 336.7 344 336.6 344 335.5C344 334.4 344 334.3 344.5 334C344.9 333.7 345 333.5 345 333C345 332.5 345.1 332.3 345.5 332C346 331.7 346 331.6 346 330.6C346 329.8 346.1 329.4 346.3 329.3C346.9 328.7 347 328.6 347 328C347 327.5 347.1 327.3 347.5 327C348 326.7 348 326.6 348 325.6C348 324.8 348.1 324.6 348.5 324.1C348.9 323.8 349 323.5 349 323C349 322.5 349.1 322.3 349.5 322C349.9 321.7 350 321.5 350 321C350 320.5 350.1 320.3 350.5 320C351 319.7 351 319.6 351 318.5C351 317.4 351 317.3 351.5 317C351.9 316.7 352 316.5 352 316C352 315.5 352.1 315.3 352.5 315C353 314.7 353 314.6 353 313.6C353 312.5 353 312.5 353.7 311.9C353.9 311.7 354 311.4 354 311C354 310.5 354.1 310.3 354.5 310C355 309.7 355 309.6 355 308.6C355 307.8 355.1 307.6 355.5 307.1C355.9 306.8 356 306.5 356 306C356 305.5 356.1 305.3 356.5 305C356.9 304.7 357 304.5 357 304C357 303.5 357.1 303.3 357.5 303C358 302.7 358 302.6 358 301.5C358 300.4 358 300.3 358.5 300C358.9 299.7 359 299.5 359 299C359 298.5 359.1 298.3 359.5 298C360 297.7 360 297.6 360 296.5C360 295.4 360 295.3 360.5 295C360.9 294.7 361 294.5 361 294C361 293.5 361.1 293.3 361.5 293C362 292.7 362 292.6 362 291.6C362 290.5 362 290.5 362.7 289.9C362.9 289.7 363 289.4 363 289C363 288.5 363.1 288.3 363.5 288C364 287.7 364 287.6 364 286.6C364 285.7 364.1 285.6 364.5 285.2C364.9 284.8 365 284.6 365 284.1C365 283.5 365.1 283.3 365.5 283C365.9 282.7 366 282.5 366 282C366 281.5 366.1 281.3 366.5 281C367 280.7 367 280.6 367 279.5C367 278.4 367 278.3 367.5 278C367.9 277.7 368 277.5 368 277C368 276.5 368.1 276.3 368.5 276C369 275.7 369 275.6 369 274.6C369 273.5 369 273.5 369.7 272.9C369.9 272.7 370 272.4 370 272C370 271.5 370.1 271.3 370.5 271C371 270.7 371 270.6 371 269.6C371 268.7 371.1 268.6 371.5 268.2C371.9 267.8 372 267.6 372 267C372 266.5 372.1 266.3 372.5 266C372.9 265.7 373 265.5 373 265C373 264.5 373.1 264.3 373.5 264C374 263.7 374 263.6 374 262.5C374 261.4 374 261.3 374.5 261C374.9 260.7 375 260.5 375 260C375 259.5 375.1 259.3 375.5 259C376 258.7 376 258.6 376 257.6C376 256.5 376 256.5 376.7 255.9C376.9 255.7 377 255.4 377 255C377 254.5 377.1 254.3 377.5 254C378 253.7 378 253.6 378 252.7C378 251.8 378.1 251.6 378.5 251.1C378.9 250.8 379 250.5 379 250C379 249.5 379.1 249.3 379.5 249C379.9 248.7 380 248.5 380 248C380 247.5 380.1 247.3 380.5 247C381 246.7 381 246.6 381 245.5C381 244.4 381 244.3 381.5 244C381.9 243.7 382 243.5 382 243C382 242.5 382.1 242.3 382.5 242C383 241.7 383 241.6 383 240.6C383 239.5 383 239.5 383.7 238.9C383.9 238.8 384 238.4 384 238.1C384 237.6 384.1 237.3 384.7 236.7L385.5 236L390.5 236C394.2 236 395.6 236.1 395.8 236.2C395.9 236.3 396 236.7 396 237C396 237.5 396.1 237.7 396.5 238C397 238.3 397 238.4 397 239.5C397 240.6 397 240.7 397.5 241C397.9 241.3 398 241.5 398 242C398 242.5 398.1 242.7 398.5 243C399 243.3 399 243.4 399 244.5C399 245.6 399 245.7 399.5 246C399.9 246.3 400 246.5 400 247C400 247.5 400.1 247.7 400.5 248C400.9 248.3 401 248.5 401 249C401 249.6 401.1 249.8 401.5 250.2C401.9 250.6 402 250.7 402 251.6C402 252.6 402 252.7 402.5 253C402.9 253.3 403 253.5 403 254C403 254.5 403.1 254.8 403.5 255.1C403.9 255.5 404 255.7 404 256.6C404 257.6 404 257.7 404.5 258C404.9 258.3 405 258.5 405 259C405 259.6 405.1 259.7 405.7 260.3C405.9 260.4 406 260.8 406 261.6C406 262.6 406 262.7 406.5 263C406.9 263.3 407 263.5 407 264C407 264.5 407.1 264.7 407.5 265C408 265.3 408 265.4 408 266.5C408 267.6 408 267.7 408.5 268C408.9 268.3 409 268.5 409 269C409 269.5 409.1 269.7 409.5 270C410 270.3 410 270.4 410 271.5C410 272.6 410 272.7 410.5 273C410.9 273.3 411 273.5 411 274C411 274.5 411.1 274.7 411.5 275C411.9 275.3 412 275.5 412 276C412 276.5 412.1 276.8 412.5 277.1C412.9 277.6 413 277.8 413 278.6C413 279.6 413 279.7 413.5 280C413.9 280.3 414 280.5 414 281C414 281.6 414.1 281.7 414.7 282.3C414.9 282.4 415 282.8 415 283.6C415 284.6 415 284.7 415.5 285C415.9 285.3 416 285.5 416 286C416 286.5 416.1 286.7 416.5 287.1C417 287.5 417 287.6 417 288.6C417 289.6 417 289.7 417.5 290C417.9 290.3 418 290.5 418 291C418 291.5 418.1 291.7 418.5 292C419 292.3 419 292.4 419 293.5C419 294.6 419 294.7 419.5 295C419.9 295.3 420 295.5 420 296C420 296.5 420.1 296.7 420.5 297C421 297.3 421 297.4 421 298.5C421 299.6 421 299.7 421.5 300C421.9 300.3 422 300.5 422 301C422 301.5 422.1 301.7 422.5 302C422.9 302.3 423 302.5 423 303C423 303.5 423.1 303.8 423.5 304.1C423.9 304.5 424 304.6 424 305.6C424 306.6 424 306.7 424.5 307C424.9 307.3 425 307.5 425 308C425 308.6 425.1 308.7 425.7 309.3C425.9 309.4 426 309.8 426 310.6C426 311.6 426 311.7 426.5 312C426.9 312.3 427 312.5 427 313C427 313.5 427.1 313.7 427.5 314C428 314.3 428 314.4 428 315.5C428 316.6 428 316.7 428.5 317C428.9 317.3 429 317.5 429 318C429 318.5 429.1 318.7 429.5 319C430 319.3 430 319.4 430 320.5C430 321.6 430 321.7 430.5 322C430.9 322.3 431 322.5 431 323C431 323.5 431.1 323.7 431.5 324C431.9 324.3 432 324.5 432 325C432 325.6 432.1 325.8 432.5 326.2C432.9 326.6 433 326.7 433 327.6C433 328.6 433 328.7 433.5 329C433.9 329.3 434 329.5 434 330C434 330.6 434.1 330.7 434.7 331.3C434.9 331.4 435 331.8 435 332.6C435 333.6 435 333.7 435.5 334C435.9 334.3 436 334.5 436 335C436 335.6 436.1 335.7 436.7 336.3C436.9 336.4 437 336.8 437 337.6C437 338.6 437 338.7 437.5 339C437.9 339.3 438 339.5 438 340C438 340.5 438.1 340.7 438.5 341C439 341.3 439 341.4 439 342.5C439 343.6 439 343.7 439.5 344C439.9 344.3 440 344.5 440 345C440 345.5 440.1 345.7 440.5 346C441 346.3 441 346.4 441 347.5C441 348.6 441 348.7 441.5 349C441.9 349.3 442 349.5 442 350C442 350.5 442.1 350.7 442.5 351C442.9 351.3 443 351.5 443 352C443 352.3 442.9 352.7 442.8 352.8C442.6 352.9 440.7 353 435 353L427.3 353L427.1 352.5C426.9 352.3 426.6 351.9 426.4 351.8C426.1 351.5 426 351.3 426 350.4C426 349.4 426 349.3 425.5 349C425.1 348.7 425 348.5 425 348C425 347.5 424.9 347.2 424.5 346.9C424.1 346.4 424 346.2 424 345.4C424 344.4 424 344.3 423.5 344C423.1 343.7 423 343.5 423 343C423 342.4 422.9 342.2 422.5 341.8C422.1 341.4 422 341.3 422 340.4C422 339.4 422 339.3 421.5 339C421.1 338.7 421 338.5 421 338C421 337.4 420.9 337.2 420.5 336.8C420.1 336.4 420 336.3 420 335.4C420 334.4 420 334.3 419.5 334C419.1 333.7 419 333.5 419 332.9C419 332.4 418.9 332.2 418.5 331.8C418.1 331.4 418 331.3 418 330.4C418 329.4 418 329.3 417.5 329C417.1 328.7 417 328.5 417 328.1C417 327.6 416.9 327.3 416.3 326.7L415.5 326L389.9 326C367.7 326 364.3 326 364.1 326.2C363.7 326.7 363.5 326.9 363.3 327.1C363.1 327.2 363 327.6 363 327.9C363 328.4 362.9 328.6 362.3 329.1C362.1 329.3 362 329.6 362 330C362 330.5 361.9 330.7 361.5 331C361 331.3 361 331.4 361 332.4C361 333.5 361 333.5 360.3 334.1C360.1 334.3 360 334.6 360 335C360 335.5 359.9 335.7 359.5 336C359 336.3 359 336.4 359 337.4C359 338.5 359 338.5 358.3 339.1C358.1 339.3 358 339.6 358 340C358 340.5 357.9 340.7 357.5 341C357 341.3 357 341.4 357 342.4C357 343.2 356.9 343.4 356.5 343.9C356.1 344.2 356 344.5 356 345C356 345.5 355.9 345.7 355.5 346C355 346.3 355 346.4 355 347.4C355 348.4 354.9 348.5 354.5 348.9C354.1 349.2 354 349.5 354 350C354 350.5 353.9 350.7 353.5 351C353.1 351.3 353 351.5 353 352C353 352.3 352.9 352.7 352.8 352.8C352.5 353.1 337.5 353.1 337.2 352.8ZM410.8 312.9C410.9 312.9 411 312.5 411 312.1C411 311.5 410.9 311.3 410.5 311C410.1 310.7 410 310.5 410 310C410 309.5 409.9 309.3 409.5 309C409 308.7 409 308.6 409 307.5C409 306.4 409 306.3 408.5 306C408.1 305.7 408 305.5 408 305C408 304.5 407.9 304.3 407.5 304C407 303.7 407 303.6 407 302.5C407 301.4 407 301.3 406.5 301C406.1 300.7 406 300.5 406 300C406 299.5 405.9 299.3 405.5 299C405 298.7 405 298.6 405 297.5C405 296.4 405 296.3 404.5 296C404.1 295.7 404 295.5 404 295C404 294.5 403.9 294.3 403.5 293.9C403 293.5 403 293.4 403 292.4C403 291.4 403 291.3 402.5 291C402.1 290.7 402 290.5 402 290C402 289.6 401.9 289.3 401.7 289.1C401 288.5 401 288.5 401 287.4C401 286.4 401 286.3 400.5 286C400.1 285.7 400 285.5 400 285C400 284.6 399.9 284.3 399.7 284.1C399 283.5 399 283.5 399 282.4C399 281.4 399 281.3 398.5 281C398.1 280.7 398 280.5 398 280C398 279.6 397.9 279.3 397.7 279.1C397 278.5 397 278.5 397 277.4C397 276.4 397 276.3 396.5 276C396.1 275.7 396 275.5 396 275C396 274.6 395.9 274.3 395.7 274.1C395 273.5 395 273.5 395 272.4C395 271.4 395 271.3 394.5 271C394.1 270.7 394 270.5 394 270C394 269.6 393.9 269.3 393.7 269.1C393 268.5 393 268.5 393 267.4C393 266.4 393 266.3 392.5 266C392.1 265.7 392 265.5 392 265C392 264.5 391.9 264.2 391.5 263.9C391.1 263.5 391 263.4 391 262.4C391 261.2 390.8 261 390 261C389.1 261 389 261.2 389 262.5C389 263.6 389 263.7 388.5 264C388.1 264.3 388 264.5 388 265C388 265.5 387.9 265.7 387.5 266C387 266.3 387 266.4 387 267.5C387 268.6 387 268.7 386.5 269C386.1 269.3 386 269.5 386 270C386 270.5 385.9 270.7 385.5 271C385 271.3 385 271.4 385 272.5C385 273.6 385 273.7 384.5 274C384.1 274.3 384 274.5 384 275C384 275.5 383.9 275.7 383.5 276C383 276.3 383 276.4 383 277.5C383 278.6 383 278.7 382.5 279C382.1 279.3 382 279.5 382 280C382 280.5 381.9 280.7 381.5 281C381 281.3 381 281.4 381 282.5C381 283.6 381 283.7 380.5 284C380.1 284.3 380 284.5 380 285C380 285.5 379.9 285.7 379.5 286C379 286.3 379 286.4 379 287.5C379 288.6 379 288.7 378.5 289C378.1 289.3 378 289.5 378 290C378 290.5 377.9 290.7 377.5 291C377 291.3 377 291.4 377 292.5C377 293.6 377 293.7 376.5 294C376.1 294.3 376 294.5 376 295C376 295.5 375.9 295.7 375.5 296C375 296.3 375 296.4 375 297.4C375 298.2 374.9 298.6 374.7 298.7C374.1 299.3 374 299.4 374 300C374 300.5 373.9 300.7 373.5 301C373 301.3 373 301.4 373 302.4C373 303.5 373 303.5 372.3 304.1C372.1 304.3 372 304.6 372 305C372 305.5 371.9 305.7 371.5 306C371 306.3 371 306.4 371 307.4C371 308.2 370.9 308.6 370.7 308.7C370.1 309.3 370 309.4 370 310C370 310.5 369.9 310.7 369.5 311C369.1 311.3 369 311.5 369 312.1C369 312.7 369.1 312.9 369.3 313C369.7 313.1 410.4 313.1 410.8 312.9Z"/><path d="M486.1 354.5L485.6 354L483.1 354L480.6 354L480.1 353.5C479.7 353 479.6 353 478.5 353C477.4 353 477.3 353 477 352.5C476.7 352.1 476.5 352 476 352C475.5 352 475.3 351.9 475 351.5C474.7 351.1 474.5 351 474 351C473.5 351 473.3 350.9 473 350.5C472.7 350.1 472.5 350 472 350C471.5 350 471.3 349.9 471 349.5C470.7 349.1 470.5 349 470.1 349C469.5 349 469.3 348.8 468 347.5C466.8 346.2 466.5 346 466 346C465.5 346 465.2 345.7 463.2 343.7C461.4 341.9 461 341.4 461 341C461 340.6 460.7 340.2 459.5 339C458.2 337.7 458 337.4 458 336.9C458 336.5 457.9 336.3 457.5 336C457.1 335.7 457 335.5 457 335C457 334.5 456.9 334.3 456.5 334C456.1 333.7 456 333.5 456 333C456 332.5 455.9 332.3 455.5 332C455.1 331.7 455 331.5 455 331C455 330.5 454.9 330.3 454.5 330C454 329.7 454 329.6 454 328.5C454 327.4 454 327.3 453.5 327C453 326.6 453 326.6 453 325C453 323.4 453 323.4 452.5 323L452 322.6L452 313.1C452 302.9 452 303.5 452.7 302.9C452.9 302.7 453 302.3 453 301.1C453 299.5 453 299.5 453.7 298.9C453.9 298.7 454 298.4 454 297.6C454 296.7 454.1 296.6 454.5 296.2C454.9 295.8 455 295.6 455 295.1C455 294.5 455.1 294.3 455.5 294C455.9 293.7 456 293.5 456 293C456 292.5 456.1 292.3 456.5 292C456.9 291.7 457 291.5 457 291.2C457 290.7 457.4 290.1 458.5 289.1C458.8 288.7 459 288.4 459 288C459 287.6 459.5 287 463.4 283.2C465.8 280.8 467.9 278.6 468.2 278.4C468.4 278.1 468.8 278 469.1 278C469.5 278 469.7 277.9 470 277.5C470.3 277.1 470.5 277 471 277C471.4 277 471.7 276.9 472.1 276.5C473.4 275.1 473.6 275 474.7 275C475.6 275 475.7 275 476 274.5C476.3 274.1 476.5 274 477 274C477.6 274 477.7 273.9 478.3 273.3C478.5 273.1 478.9 273 480.1 273C481.7 273 481.7 273 482.3 272.3C482.5 272 483.5 272 490.1 272L497.6 272L498 272.5C498.4 273 498.4 273 500 273C501.6 273 501.6 273 502 273.5C502.3 274 502.4 274 503.4 274C504.4 274 504.5 274.1 504.9 274.5C505.2 274.9 505.5 275 505.9 275C506.2 275 506.6 275.1 506.7 275.3C506.8 275.4 507 275.6 507.1 275.7C507.3 275.8 507.6 276.2 507.9 276.5C508.3 276.9 508.6 277 509 277C509.5 277 509.7 277.2 510.5 278C511.2 278.8 511.6 279 511.9 279C512.2 279 512.5 279.2 512.8 279.5C513 279.8 513.3 280 513.4 280C513.5 280 514.1 280.5 515.3 281.9C515.4 282 515.6 282.2 515.7 282.3C515.9 282.4 516 282.8 516 283.1C516 283.4 516.1 283.7 516.2 283.8C516.5 284.1 517.5 284.1 517.8 283.8C518 283.6 518 277.8 518 258.5C518 239.2 518 233.3 518.2 233.2C518.5 232.9 531.5 232.9 531.8 233.2C532.1 233.5 532.1 352.5 531.8 352.8C531.5 353.1 518.5 353.1 518.2 352.8C518.1 352.6 518 350.8 518 347.3L517.9 342.1L517.5 342C517.3 342 517.1 342.1 517 342.3C516.8 342.7 512 347.5 510.9 348.5C510.5 348.8 510.1 349 509.8 349C509.5 349 509.3 349.1 509 349.5C508.7 349.9 508.5 350 508 350C507.5 350 507.3 350.1 507 350.5C506.7 350.9 506.5 351 506 351C505.5 351 505.3 351.1 505 351.5C504.7 351.9 504.5 352 504 352C503.5 352 503.3 352.1 503 352.5C502.7 353 502.6 353 501.5 353C500.4 353 500.3 353 500 353.5L499.6 354L497.5 354L495.4 354L494.9 354.5L494.3 355L490.4 355L486.5 355L486.1 354.5ZM500 340.5C500.3 340 500.4 340 501.5 340C502.6 340 502.7 340 503 339.5C503.3 339.1 503.5 339 504 339C504.5 339 504.7 338.9 505 338.5C505.3 338.1 505.5 338 505.9 338C506.6 338 506.5 338 510.8 333.8C513.9 330.6 514 330.5 514 330.1C514 329.7 514.4 329.2 515.5 328.1C515.9 327.7 516 327.4 516 327C516 326.5 516.1 326.3 516.5 326C517 325.7 517 325.6 517 324.5C517 323.4 517 323.3 517.5 323L518 322.6L518 320.6C518 318.9 518 318.5 518.3 318.3C519 317.6 519 317.9 519 313L519 308.4L518.5 308C518 307.6 518 307.6 518 306C518 304.4 518 304.4 517.5 303.9C517.1 303.4 517 303.2 517 302.4C517 301.4 517 301.3 516.5 301C516.1 300.7 516 300.5 516 300C516 299.6 515.9 299.3 515.7 299.1C515.1 298.6 515 298.4 515 297.9C515 297.5 514.9 297.3 514.5 297C514.1 296.7 514 296.5 514 296.1C514 295.6 513.7 295.2 511.2 292.8C509.2 290.7 508.4 290 508.1 290C507.7 290 507.1 289.6 506.1 288.5C505.7 288.1 505.4 288 505 288C504.5 288 504.3 287.9 504 287.5C503.7 287.1 503.5 287 503 287C502.5 287 502.3 286.9 502 286.5C501.6 286 501.6 286 500 286C498.4 286 498.4 286 498 285.5L497.6 285L493 285L488.3 285L487.9 285.5C487.5 286 487.4 286 485.9 286C484.4 286 484.4 286 484 286.5C483.7 287 483.6 287 482.5 287C481.4 287 481.3 287 481 287.5C480.7 287.9 480.5 288 480 288C479.5 288 479.3 288.1 478.5 289C477.7 289.8 477.5 290 477 290C476.6 290 476.2 290.3 474.2 292.2C472.3 294.2 472 294.6 472 295C472 295.5 471.8 295.7 471 296.5C470.1 297.3 470 297.5 470 298C470 298.5 469.9 298.7 469.5 299C469.1 299.3 469 299.5 469 300C469 300.5 468.9 300.7 468.5 301C468 301.3 468 301.4 468 302.5C468 303.6 468 303.7 467.5 304L467 304.4L467 306.4C467 308.1 466.9 308.5 466.7 308.7C466 309.4 466 309.1 466 313.5L466 317.6L466.5 318C467 318.4 467 318.4 467 320C467 321.7 467 321.7 467.5 322.2C467.9 322.6 468 322.7 468 323.6C468 324.4 468.1 324.7 468.3 324.9C468.9 325.4 469 325.6 469 326.1C469 326.4 469.1 326.8 469.5 327.1C469.8 327.5 470 327.8 470 328.1C470 328.5 470.1 328.7 470.5 329C470.9 329.3 471 329.5 471 329.9C471 330.5 471.3 330.8 474.2 333.8C477.2 336.7 477.5 337 478.1 337C478.5 337 478.7 337.1 479 337.5C479.3 337.9 479.5 338 479.9 338C480.2 338 480.5 338.2 480.9 338.5C481.2 338.9 481.5 339 482 339C482.5 339 482.7 339.1 483 339.5C483.3 340 483.4 340 484.5 340C485.6 340 485.7 340 486 340.5L486.4 341L493 341L499.6 341L500 340.5Z"/><path d="M551.2 352.8C550.9 352.5 550.9 273.5 551.2 273.2C551.5 272.9 564.5 272.9 564.8 273.2C564.9 273.3 565 274.5 565 277.4C565 279.7 565 281.6 565.1 281.7C565.2 281.9 565.4 282 565.9 282C566.5 282 566.6 281.9 568.5 280C570.2 278.3 570.5 278 571 278C571.5 278 571.7 277.8 572.5 277C573.3 276.1 573.5 276 574 276C574.5 276 574.7 275.9 575 275.5C575.3 275.1 575.5 275 576 275C576.5 275 576.7 274.9 577 274.5C577.3 274.1 577.5 274 578 274C578.5 274 578.7 273.9 579 273.5C579.4 273 579.4 273 581 273C582.6 273 582.6 273 583 272.5L583.4 272L590.4 272C597.9 272 597.5 272 598.1 272.7C598.3 272.9 598.7 273 599.5 273C600.6 273 600.7 273 601 273.5C601.3 274 601.4 274 602.5 274C603.6 274 603.7 274 604 274.5C604.3 274.9 604.5 275 605 275C605.5 275 605.7 275.1 606 275.5C606.3 275.9 606.5 276 606.8 276C607.4 276 607.5 276.1 611.7 280.3C615.9 284.4 616 284.6 616 285.1C616 285.8 616.3 286 617 286C617.8 286 618 285.8 618 285C618 284.5 618.3 284.2 621.3 281.2C623.1 279.4 624.7 277.8 624.9 277.7C625 277.6 625.2 277.4 625.3 277.3C625.4 277.1 625.8 277 626.1 277C626.5 277 626.7 276.9 627 276.5C627.3 276.1 627.5 276 628 276C628.5 276 628.7 275.9 629 275.5C629.3 275.1 629.5 275 630 275C630.5 275 630.7 274.9 631 274.5C631.3 274.1 631.5 274 632 274C632.5 274 632.7 273.9 633 273.5C633.4 273 633.4 273 635 273C636.6 273 636.6 273 637 272.5L637.4 272L644.5 272L651.6 272L652 272.5C652.4 273 652.4 273 653.9 273C655.4 273 655.5 273 655.9 273.5C656.2 273.9 656.5 274 657 274C657.5 274 657.7 274.1 658 274.5C658.3 274.9 658.5 275 659 275C659.5 275 659.7 275.1 660 275.5C660.3 275.9 660.5 276 661 276C661.5 276 661.7 276.1 662.5 277C663.3 277.8 663.5 278 664 278C664.4 278 664.8 278.3 666.7 280.3C668.7 282.2 669 282.6 669 283C669 283.4 669.2 283.7 670 284.5C670.9 285.3 671 285.5 671 286C671 286.5 671.1 286.7 671.5 287C671.9 287.3 672 287.5 672 288C672 288.5 672.1 288.7 672.5 289C673 289.3 673 289.4 673 290.5C673 291.6 673 291.7 673.5 292L674 292.4L674 294.5L674 296.6L674.5 297L675 297.4L675 325C675 346.2 675 352.6 674.8 352.8C674.6 353 660.4 353.1 660.3 352.9C660.2 352.8 660.2 340.5 660.1 325.6L660.1 298.5L659.5 298C659 297.5 659 297.4 659 296.5C659 295.5 659 295.4 658.5 294.9C657.4 293.9 657 293.3 657 292.9C657 292.6 656.4 291.9 654.8 290.2C652.7 288.2 652.5 288 651.9 288C651.5 288 651.3 287.9 651 287.5C650.7 287.1 650.5 287 650 287C649.5 287 649.3 286.9 649 286.5C648.7 286 648.6 286 647.5 286C646.4 286 646.3 286 646 285.5L645.6 285L640.9 285L636.2 285L635.8 285.5C635.4 286 635.3 286 633.9 286C632.4 286 632.4 286 632 286.5C631.7 286.9 631.5 287 631 287C630.5 287 630.3 287.1 630 287.5C629.7 287.9 629.5 288 629.1 288C628.5 288 628.2 288.3 625.8 290.8C623.3 293.2 623 293.6 623 294.1C623 294.5 622.9 294.7 622.5 295C622.1 295.3 622 295.5 622 296C622 296.5 621.9 296.7 621.5 297C621 297.4 621 297.4 621 298.9C621 300.4 621 300.5 620.5 300.9L620 301.3L620 327C620 346.7 620 352.6 619.8 352.8C619.6 352.9 617.9 353 613 353C608.1 353 606.4 352.9 606.2 352.8C606 352.6 606 346.7 606 326.9L606 301.2L605.5 300.8C605 300.4 605 300.3 605 298.9C605 297.4 605 297.4 604.5 297C604.1 296.7 604 296.5 604 296C604 295.4 603.9 295.3 603.3 294.7C603.1 294.6 603 294.3 603 294C603 293.6 602.6 293.1 600.2 290.8C597.8 288.3 597.5 288 596.9 288C596.5 288 596.3 287.9 596 287.5C595.7 287.1 595.5 287 595 287C594.5 287 594.3 286.9 594 286.5C593.7 286 593.6 286 592.6 286C591.5 286 591.5 286 590.9 285.3C590.7 285 590 285 586 285L581.3 285L580.9 285.5C580.5 286 580.4 286 578.9 286C577.4 286 577.4 286 577 286.5C576.7 286.9 576.5 287 576 287C575.5 287 575.3 287.1 574.5 288C573.7 288.8 573.5 289 573 289C572.6 289 572.2 289.3 570.7 290.7C569.2 292.3 569 292.6 569 293.1C569 293.5 568.9 293.7 568.5 294C568.1 294.3 568 294.5 568 294.9C568 295.2 567.8 295.5 567.5 295.9C567.1 296.2 567 296.5 567 297C567 297.5 566.9 297.7 566.5 298L566 298.3L566 300.9L565.9 303.5L565.5 303.9L565 304.3L565 327.9L565 351.6L565.5 352C566 352.4 566 352.5 565.9 352.7C565.6 353 564.8 353 558.5 353C553.2 353 551.4 352.9 551.2 352.8Z"/><path d="M692.2 352.8C691.9 352.5 691.9 273.5 692.2 273.2C692.5 272.9 706.5 272.9 706.8 273.2C707.1 273.5 707.1 352.5 706.8 352.8C706.5 353.1 692.5 353.1 692.2 352.8ZM696 255.5C695.7 255.1 695.5 255 695.1 255C694.5 255 694.3 254.8 693.2 253.7C690.9 251.3 691 251.5 691 249.8C691 248.4 691 248.3 690.5 248C690.1 247.7 690 247.5 690 247C690 246.5 690.1 246.3 690.5 246C691 245.7 691 245.6 691 244.1L691 242.5L692.7 240.7C694.3 239.2 694.5 239 695.1 239C695.5 239 695.7 238.9 696 238.5L696.4 238L699.9 238C702.9 238 703.5 238 703.7 238.3C703.8 238.4 704 238.6 704.1 238.7C704.3 238.8 705.2 239.7 706.2 240.7L708 242.5L708 243.6C708 244.6 708 244.7 708.5 245C709 245.3 709 245.4 709 246.9C709 248.5 709 248.5 708.5 248.9C708 249.3 708 249.5 708 250.4L708 251.5L706.3 253.3C704.7 254.8 704.5 255 703.9 255C703.5 255 703.3 255.1 703 255.5L702.6 256L699.5 256L696.4 256L696 255.5Z"/><path d="M726.2 352.8C725.9 352.5 725.9 273.5 726.2 273.2C726.5 272.9 739.5 272.9 739.8 273.2C739.9 273.4 740 275 740 278.2L740.1 282.9L740.8 283L741.5 283L744.1 280.4C745.6 279 746.9 277.6 747.2 277.4C747.4 277.1 747.8 277 748.1 277C748.5 277 748.7 276.9 749 276.5C749.3 276.1 749.5 276 750 276C750.5 276 750.7 275.9 751 275.5C751.3 275.1 751.5 275 752 275C752.5 275 752.7 274.9 753 274.5C753.3 274.1 753.5 274 754 274C754.5 274 754.7 273.9 755 273.5C755.4 273 755.4 273 757 273C758.6 273 758.6 273 759 272.5L759.4 272L766.4 272C773.9 272 773.5 272 774.1 272.7C774.3 272.9 774.7 273 775.5 273C776.6 273 776.7 273 777 273.5C777.3 274 777.4 274 778.3 274C779.4 274 779.6 274.1 780.9 275.5C781.3 275.9 781.6 276 782 276C782.5 276 782.7 276.2 783.5 277C784.3 277.8 784.5 278 785 278C785.5 278 785.8 278.3 788.3 280.8C790.6 283.1 791 283.6 791 284C791 284.4 791.2 284.7 792 285.5C792.9 286.3 793 286.5 793 287C793 287.5 793.1 287.7 793.5 288C793.9 288.3 794 288.5 794 289C794 289.5 794.1 289.7 794.5 290C794.9 290.3 795 290.5 795 291C795 291.6 795.1 291.8 795.5 292.2C796 292.6 796 292.7 796 294.1C796 295.6 796 295.6 796.5 296L797 296.4L797 324.5C797 346.1 797 352.6 796.8 352.8C796.6 352.9 794.9 353 790 353C785.1 353 783.4 352.9 783.2 352.8C783 352.6 783 346.7 783 327L783 301.4L782.5 301C782 300.7 782 300.6 782 299.5C782 298.4 782 298.3 781.3 297.7C781.1 297.6 781 297.2 781 296.9C781 296.6 780.9 296.2 780.5 295.9C780.2 295.5 780 295.2 780 294.9C780 294.6 779.8 294.2 779.5 293.9C778.1 292.6 778 292.4 778 291.9C778 291.3 776.7 290 776.1 290C775.8 290 775.5 289.8 775.2 289.5C775 289.2 774.7 289 774.6 289C774.5 289 774 288.6 773.5 288C772.7 287.1 772.5 287 772 287C771.5 287 771.3 286.9 771 286.5C770.6 286 770.6 286 769.1 286C767.5 286 767.5 286 766.9 285.3C766.7 285 766 285 762 285L757.3 285L756.8 285.5C756.4 286 756.3 286 754.9 286C753.4 286 753.4 286 753 286.5C752.7 286.9 752.5 287 752 287C751.5 287 751.3 287.1 751 287.5C750.8 287.8 750.5 288 750.4 288C750.3 288 750 288.2 749.8 288.5C749.5 288.8 749.2 289 748.9 289C748.6 289 748 289.5 746.2 291.2C744.4 293.1 744 293.6 744 294C744 294.4 743.8 294.7 743 295.5L742 296.5L742 297.6C742 298.6 742 298.7 741.5 299C741 299.4 741 299.4 741 301C741 302.6 741 302.6 740.5 303L740 303.4L740 328C740 346.9 740 352.6 739.8 352.8C739.6 352.9 737.9 353 733 353C728.1 353 726.4 352.9 726.2 352.8Z"/></g><g fill="#FAFAF8" fill-rule="evenodd"><path d="M815.2 353.1L814.8 352.8L814.8 293.5C814.8 235 814.8 234.2 815.2 234C815.4 233.9 819.7 233.8 828 233.8C840 233.8 840.6 233.8 840.9 234.1C841.1 234.4 841.2 238.8 841.2 293.6C841.2 352.4 841.2 352.7 840.8 353C840.5 353.3 840.3 353.3 828 353.3C817 353.3 815.5 353.3 815.2 353.1Z"/><path d="M890.2 353.1C890.1 353 889.9 352.9 889.8 352.8C889.7 352.7 889.7 331.2 889.7 305L889.7 257.4L889.3 257.1C889 256.9 887.9 256.8 870.8 256.8C859.6 256.8 852.5 256.8 852.3 256.7C852.1 256.5 852.1 255.1 852 245.4C852 237.2 852 234.2 852.2 234.1C852.5 233.7 952.7 233.7 953.3 234L953.7 234.2L953.7 245.3C953.7 252.5 953.6 256.5 953.5 256.6C953.4 256.7 947 256.8 934.9 256.8C916.9 256.9 916.5 256.9 916.2 257.2C916 257.5 916 264.2 916 305.2C916 350.1 916 352.9 915.7 353.1C915.3 353.4 890.8 353.4 890.2 353.1Z"/></g></g>
+        <circle cx="232" cy="432" r="52" fill="#111827"/><circle cx="232" cy="432" r="22" fill="#E7E7E2"/><path d="M232 414 V450 M214 432 H250" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="688" cy="432" r="52" fill="#111827"/><circle cx="688" cy="432" r="22" fill="#E7E7E2"/><path d="M688 414 V450 M670 432 H706" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="container section contact">
-  <div class="contact-intro reveal">
-    <span class="eyebrow">04 — Contact</span>
-    <h2 class="h2">Parlons de votre infrastructure.</h2>
-    <p class="text-lead">Un premier échange pour comprendre vos besoins. Réponse sous 24 heures.</p>
-    <div class="contact-list">
-      <a class="contact-row" href="mailto:info@adminit.support"><span class="contact-row-label">E-mail</span><span class="contact-row-value">info@adminit.support</span></a>
-      <a class="contact-row" href="tel:+41000000000"><span class="contact-row-label">Téléphone</span><span class="contact-row-value">[+41 XX XXX XX XX]</span></a>
-      <div class="contact-row"><span class="contact-row-label">Adresse</span><address class="contact-row-value">Rue de la Reuse 11<br>2300 La Chaux-de-Fonds</address></div>
+<section class="sec contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="contact-txt">
+      <h2 id="h-contact">Parlons de votre informatique</h2>
+      <p class="lead">Un premier échange pour comprendre vos besoins. L’audit de départ est gratuit. Réponse sous 24 heures.</p>
+      <div class="mail">
+        <a href="mailto:info@adminit.support" id="mail">info@adminit.support</a>
+        <button class="copy" type="button" id="copy">Copier</button>
+      </div>
     </div>
+    <form class="form" id="form" novalidate>
+      <div class="row">
+        <div class="f"><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name" required></div>
+        <div class="f"><label for="ent">Entreprise</label><input id="ent" name="entreprise" type="text" autocomplete="organization"></div>
+      </div>
+      <div class="f"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="msg">Votre besoin</label><textarea id="msg" name="message" rows="5" required placeholder="Ex. : 8 postes, une imprimante réseau, des sauvegardes à mettre en place…"></textarea></div>
+      <button class="btn btn-p" type="submit">Envoyer la demande <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      <p class="hint" id="hint">Le bouton ouvre votre messagerie avec la demande déjà rédigée. Rien n’est enregistré sur ce site.</p>
+      <p class="sent" id="sent" role="status" hidden></p>
+    </form>
   </div>
-
-  <!-- Formspree : remplacer [FORMSPREE_ID] par l'identifiant du formulaire (ex. xyzabcd) -->
-  <form class="contact-form reveal" action="https://formspree.io/f/[FORMSPREE_ID]" method="POST" data-contact-form>
-    <input type="hidden" name="_subject" value="Nouvelle demande depuis le site AdminIT">
-    <div class="form-honeypot" aria-hidden="true">
-      <label for="f-gotcha">Ne pas remplir</label>
-      <input id="f-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-    </div>
-    <div class="form-row">
-      <div class="field">
-        <label for="f-nom">Nom</label>
-        <input id="f-nom" name="nom" type="text" placeholder="Jean Dupont" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="f-ent">Entreprise</label>
-        <input id="f-ent" name="entreprise" type="text" placeholder="Votre entreprise" autocomplete="organization">
-      </div>
-    </div>
-    <div class="field">
-      <label for="f-mail">E-mail</label>
-      <input id="f-mail" name="email" type="email" placeholder="vous@entreprise.ch" autocomplete="email" required>
-    </div>
-    <div class="field">
-      <label for="f-msg">Votre besoin</label>
-      <textarea id="f-msg" name="message" rows="5" placeholder="Décrivez brièvement votre situation…" required></textarea>
-    </div>
-    <button class="btn form-submit" type="submit">Envoyer la demande</button>
-    <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-    <p class="form-note">Vos données restent confidentielles et ne sont jamais partagées. <a href="confidentialite.html">Politique de confidentialité</a></p>
-  </form>
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a class="footer-brand" href="#top"><img src="assets/logo-adminit.png" alt="AdminIT" width="113" height="22" loading="lazy"></a>
-    <span>AdminIT Mucaria · Entreprise individuelle · Neuchâtel</span>
-    <div class="footer-links">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
-    </div>
+<footer class="foot">
+  <div class="wrap">
+    <img src="assets/logo-mark.svg" alt="AdminIT" width="137" height="28">
+    <span>AdminIT Mucaria · Entreprise individuelle · La Chaux-de-Fonds</span>
+    <nav aria-label="Liens légaux"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></nav>
   </div>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

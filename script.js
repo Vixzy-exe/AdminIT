@@ -1,124 +1,37 @@
-/* AdminIT — menu mobile, apparitions au scroll, formulaire de contact */
-(() => {
-  'use strict';
+(function () {
+  var top = document.getElementById("top");
+  function onScroll() { top.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  /* ---------------------------------------------------------------
-     Menu burger
-     --------------------------------------------------------------- */
-  const header = document.querySelector('.site-header');
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.getElementById('site-nav');
-
-  if (header && toggle && nav) {
-    const desktop = window.matchMedia('(min-width: 821px)');
-    const isOpen = () => header.classList.contains('is-open');
-
-    const setOpen = (open) => {
-      header.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-    };
-
-    toggle.addEventListener('click', () => setOpen(!isOpen()));
-
-    nav.addEventListener('click', (event) => {
-      if (event.target.closest('a')) setOpen(false);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && isOpen()) {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
-
-    document.addEventListener('click', (event) => {
-      if (isOpen() && !header.contains(event.target)) setOpen(false);
-    });
-
-    desktop.addEventListener('change', (event) => {
-      if (event.matches) setOpen(false);
-    });
+  var EMAIL = "info@adminit.support";
+  var copy = document.getElementById("copy");
+  copy.addEventListener("click", function () {
+    function done() { copy.textContent = "Copié"; setTimeout(function () { copy.textContent = "Copier"; }, 1800); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(EMAIL).then(done, function () { selectMail(); });
+    } else { selectMail(); }
+  });
+  function selectMail() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById("mail"));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
   }
 
-  /* ---------------------------------------------------------------
-     Apparitions au scroll
-     --------------------------------------------------------------- */
-  const revealEls = document.querySelectorAll('.reveal');
-  const show = (el) => el.classList.add('is-visible');
-  const hasExplicitDelay = (el) => /(^|\s)d\d(\s|$)/.test(el.className);
-
-  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
-    revealEls.forEach(show);
-  } else {
-    const observer = new IntersectionObserver((entries) => {
-      // Les éléments qui apparaissent ensemble sont légèrement décalés
-      let batch = 0;
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        if (!hasExplicitDelay(el)) {
-          el.style.setProperty('--reveal-delay', `${batch * 0.08}s`);
-          batch += 1;
-        }
-        show(el);
-        observer.unobserve(el);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-
-    revealEls.forEach((el) => observer.observe(el));
-  }
-
-  /* ---------------------------------------------------------------
-     Formulaire de contact (Formspree)
-     --------------------------------------------------------------- */
-  const form = document.querySelector('[data-contact-form]');
-
-  if (form) {
-    const status = form.querySelector('[data-form-status]');
-    const submit = form.querySelector('button[type="submit"]');
-    const submitLabel = submit.textContent;
-
-    const setStatus = (state, message) => {
-      status.dataset.state = state;
-      status.textContent = message;
-    };
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const action = form.getAttribute('action') || '';
-      if (/\[.*\]/.test(action)) {
-        console.warn('Formspree : remplacez [FORMSPREE_ID] dans l\'attribut action du formulaire (index.html).');
-        setStatus('error', 'Le formulaire n\'est pas encore configuré. Écrivez-nous directement par e-mail.');
-        return;
-      }
-
-      submit.disabled = true;
-      submit.textContent = 'Envoi en cours…';
-      setStatus('', '');
-
-      try {
-        const response = await fetch(action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        });
-
-        if (response.ok) {
-          form.reset();
-          setStatus('success', 'Merci ! Votre demande a bien été envoyée. Nous vous répondons sous 24 heures.');
-        } else {
-          setStatus('error', 'L\'envoi a échoué. Merci de réessayer ou de nous écrire directement par e-mail.');
-        }
-      } catch {
-        setStatus('error', 'Connexion impossible. Vérifiez votre réseau ou écrivez-nous directement par e-mail.');
-      } finally {
-        submit.disabled = false;
-        submit.textContent = submitLabel;
-      }
-    });
-  }
+  var form = document.getElementById("form"), sent = document.getElementById("sent");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var bad = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (el) { return !el.checkValidity(); });
+    if (bad.length) {
+      bad[0].focus();
+      sent.hidden = false;
+      sent.textContent = bad[0].type === "email" && bad[0].value ? "L’adresse e-mail semble incomplète." : "Merci de remplir le nom, l’e-mail et votre besoin.";
+      return;
+    }
+    var d = new FormData(form);
+    var who = d.get("entreprise") ? d.get("entreprise") : d.get("nom");
+    var subject = "Demande d’audit · " + who;
+    var body = "Nom : " + d.get("nom") + "\nEntreprise : " + (d.get("entreprise") || "–") + "\nE-mail : " + d.get("email") + "\n\n" + d.get("message");
+    window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    sent.hidden = false;
+    sent.textContent = "Votre messagerie s’ouvre avec la demande. Il ne reste qu’à l’envoyer.";
+  });
 })();
