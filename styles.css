@@ -127,8 +127,8 @@ input, textarea, button { font: inherit; }
 
 /* Typographie partagée */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--accent);
 }
 
@@ -450,17 +450,12 @@ input, textarea, button { font: inherit; }
   border-bottom: 1px solid var(--line-soft);
 }
 
-.status-dots { display: flex; gap: 6px; }
-.status-dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--line);
-}
+.status-title { font-size: 14px; font-weight: 500; }
 
-.status-caption {
-  font-family: var(--font-mono);
+.status-tag {
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
   font-size: 12px;
   color: var(--muted);
 }
@@ -537,8 +532,8 @@ input, textarea, button { font: inherit; }
 /* La carte reste entièrement visible à l'écran, même sur un écran bas */
 .video-card {
   margin: 0 auto;
-  max-width: max(320px, calc((100vh - 150px) * 16 / 9));
-  max-width: max(320px, calc((100svh - 150px) * 16 / 9));
+  max-width: max(320px, calc((100vh - 110px) * 16 / 9));
+  max-width: max(320px, calc((100svh - 110px) * 16 / 9));
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -555,8 +550,8 @@ input, textarea, button { font: inherit; }
 /* Sur téléphone : version verticale (même seuil que l'attribut media des <source>) */
 @media (max-width: 599px) {
   .video-card {
-    max-width: max(240px, calc((100vh - 150px) * 9 / 16));
-    max-width: max(240px, calc((100svh - 150px) * 9 / 16));
+    max-width: max(240px, calc((100vh - 110px) * 9 / 16));
+    max-width: max(240px, calc((100svh - 110px) * 9 / 16));
   }
   .video-frame { aspect-ratio: 9 / 16; }
 }
@@ -791,13 +786,7 @@ html:not(.js) .video-progress { display: none; }
 }
 .svc:hover { background: var(--surface); color: var(--ink); }
 
-.svc-top { display: flex; justify-content: space-between; align-items: center; }
-
-.svc-num {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--muted);
-}
+.svc-top { display: flex; align-items: center; }
 
 .svc-title {
   margin: 0;
