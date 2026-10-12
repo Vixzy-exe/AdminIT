@@ -1,4 +1,4 @@
-/* AdminIT — navigation, apparitions au scroll, formulaire de contact */
+/* AdminIT — navigation, apparitions au scroll, vidéo, formulaire de contact */
 (() => {
   'use strict';
 
@@ -167,6 +167,123 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
 
     revealEls.forEach((el) => observer.observe(el));
+  }
+
+  /* ---------------------------------------------------------------
+     Vidéo de présentation : aperçu muet en boucle tant qu'elle est
+     à l'écran, lecture complète avec le son à la demande
+     --------------------------------------------------------------- */
+  const player = document.querySelector('[data-video]');
+  const video = player ? player.querySelector('video') : null;
+
+  if (video) {
+    const playButton = player.querySelector('[data-video-play]');
+    const playLabel = player.querySelector('[data-video-play-label]');
+    const toggleButton = player.querySelector('[data-video-toggle]');
+    const soundButton = player.querySelector('[data-video-sound]');
+    const soundLabel = player.querySelector('[data-video-sound-label]');
+    const progressBar = player.querySelector('[data-video-progress]');
+    const sources = Array.from(video.querySelectorAll('source'));
+    const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+
+    let watching = false;       // le visiteur a demandé la lecture avec le son
+    let pausedByUser = false;
+
+    // Les commandes maison remplacent celles du navigateur
+    video.removeAttribute('controls');
+    video.loop = true;
+
+    // Format adapté à l'écran : vertical sur téléphone, 16:9 ailleurs
+    const applySource = () => {
+      const source = sources.find((s) => !s.media || window.matchMedia(s.media).matches) || sources[0];
+      const src = source.getAttribute('src');
+      if (video.getAttribute('src') === src) return;
+      const time = video.currentTime;
+      const wasPlaying = !video.paused;
+      video.poster = source.dataset.poster;
+      video.src = src;
+      if (time) video.addEventListener('loadedmetadata', () => { video.currentTime = time; }, { once: true });
+      if (wasPlaying) video.play().catch(() => {});
+    };
+
+    applySource();
+    sources.forEach((source) => {
+      if (source.media) window.matchMedia(source.media).addEventListener('change', applySource);
+    });
+
+    // Lecture refusée par le navigateur : le bouton « Regarder » reste affiché
+    const play = () => video.play().catch(() => {});
+
+    const render = () => {
+      player.classList.toggle('is-playing', !video.paused);
+      player.classList.toggle('is-muted', video.muted);
+      toggleButton.setAttribute('aria-label', video.paused ? 'Lire la vidéo' : 'Mettre la vidéo en pause');
+      let sound = 'Regarder avec le son';
+      if (watching) sound = video.muted ? 'Activer le son' : 'Couper le son';
+      soundLabel.textContent = sound;
+    };
+
+    // Barre de progression, rafraîchie à chaque image pendant la lecture
+    let progressFrame = 0;
+    const drawProgress = () => {
+      const ratio = video.duration ? video.currentTime / video.duration : 0;
+      progressBar.style.transform = `scaleX(${ratio})`;
+      progressFrame = video.paused ? 0 : window.requestAnimationFrame(drawProgress);
+    };
+
+    const watchWithSound = () => {
+      watching = true;
+      pausedByUser = false;
+      video.loop = false;
+      video.muted = false;
+      video.currentTime = 0;
+      play();
+      render();
+    };
+
+    const togglePlay = () => {
+      pausedByUser = !video.paused;
+      if (video.paused) play();
+      else video.pause();
+    };
+
+    ['play', 'pause', 'volumechange'].forEach((type) => video.addEventListener(type, render));
+    ['play', 'seeked'].forEach((type) => video.addEventListener(type, () => {
+      if (!progressFrame) drawProgress();
+    }));
+
+    video.addEventListener('playing', () => player.classList.add('is-started'));
+    video.addEventListener('ended', () => {
+      player.classList.remove('is-started');
+      playLabel.textContent = 'Revoir la vidéo';
+    });
+
+    playButton.addEventListener('click', watchWithSound);
+    toggleButton.addEventListener('click', togglePlay);
+
+    // Depuis l'aperçu muet, le son relance la vidéo depuis le début
+    soundButton.addEventListener('click', () => {
+      if (!watching) watchWithSound();
+      else video.muted = !video.muted;
+    });
+
+    video.addEventListener('click', () => {
+      if (!watching) watchWithSound();
+      else togglePlay();
+    });
+
+    // Pause dès que la vidéo quitte l'écran ; l'aperçu muet reprend à son retour
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) {
+          video.pause();
+          return;
+        }
+        if (!watching && !pausedByUser && !reduceMotion.matches && !saveData) play();
+      }, { threshold: 0.5 }).observe(player);
+    }
+
+    render();
   }
 
   /* ---------------------------------------------------------------

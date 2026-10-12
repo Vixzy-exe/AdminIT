@@ -6,6 +6,7 @@ Site statique (HTML + CSS), hébergé sur GitHub Pages.
 - `mentions-legales.html`, `confidentialite.html` : pages légales
 - `styles.css`, `script.js` : mise en forme et petites interactions
 - `assets/` : polices, logo, icônes, image de partage
+- `assets/video/` : vidéo de présentation en 16:9 (ordinateur) et 9:16 (téléphone), avec leur image d'aperçu
 
 ## Modifier un texte
 Ouvrir le fichier sur GitHub, cliquer sur le crayon, modifier, puis « Commit changes ». Le site se met à jour en une minute environ.
