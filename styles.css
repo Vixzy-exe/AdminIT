@@ -185,6 +185,9 @@ input, textarea, button { font: inherit; }
 .btn-outline { border: 1px solid var(--line-strong); color: var(--ink); }
 .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
 
+.btn-outline-light { border: 1px solid var(--dark-line); color: var(--bg); }
+.btn-outline-light:hover { border-color: var(--bg); color: var(--bg); }
+
 .btn-lg { padding: 15px 24px; font-size: 16px; }
 
 .btn .arr { transition: transform .3s var(--ease-out); }
@@ -1157,6 +1160,146 @@ html:not(.js) .video-progress { display: none; }
 .footer-links a[aria-current="page"] { color: var(--ink); }
 
 /* --------------------------------------------------------------------------
+   Pages de service
+   -------------------------------------------------------------------------- */
+
+.service-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-block: calc(var(--header-space) + clamp(40px, 6vw, 72px)) clamp(64px, 8vw, 104px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.back-link:hover { color: var(--accent); }
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.service-hero .hero-lead { max-width: 640px; }
+.service-hero .hero-actions { margin-top: 4px; }
+
+/* Situations fréquentes : grille de cases séparées par un filet */
+.problems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+@media (min-width: 700px) { .problems { grid-template-columns: repeat(2, 1fr); } }
+
+.problem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 28px;
+  background: var(--surface);
+}
+
+.problem h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.problem p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Prestations : liste à filets, comme les étapes de l'approche */
+.offers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+.offer:last-child { border-bottom: 1px solid var(--line); }
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.text-link:hover .arr { transform: translateX(3px); }
+
+/* Encadré d'appel à l'action */
+.service-cta-wrap { padding-bottom: var(--section-y); }
+
+.service-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px 48px;
+  padding: clamp(36px, 6vw, 72px) clamp(24px, 6vw, 72px);
+  border-radius: var(--radius-xl);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.service-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 620px;
+}
+
+.service-cta-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-muted);
+}
+
+.service-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 480px) {
+  .service-cta-actions .btn { flex: 1 1 100%; }
+}
+
+/* Autres services : trois cartes, une seule colonne avant 900 px */
+.services-grid.services-grid--others { grid-template-columns: 1fr; }
+@media (min-width: 900px) {
+  .services-grid.services-grid--others { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --------------------------------------------------------------------------
    Pages légales
    -------------------------------------------------------------------------- */
 
@@ -1314,7 +1457,8 @@ html:not(.js) .video-progress { display: none; }
 
   .btn:hover,
   .btn:hover .arr,
-  .svc:hover .arr { transform: none; }
+  .svc:hover .arr,
+  .text-link:hover .arr { transform: none; }
 
   .video-play:hover,
   .video-frame.is-started .video-play,
