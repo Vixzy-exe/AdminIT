@@ -58,7 +58,7 @@
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <header class="site-header">
-  <div class="container header-inner">
+  <div class="nav-shell">
     <a class="brand" href="#top" aria-label="AdminIT — retour en haut de page">
       <img src="assets/logo-adminit.png" alt="AdminIT" width="153" height="30">
     </a>
@@ -67,11 +67,15 @@
       <span class="nav-toggle-bar"></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-      <a href="#services">Services</a>
-      <a href="#approche">Approche</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-dark" href="#contact">Demander un audit</a>
+      <div class="nav-links">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="#services">Services</a>
+        <a href="#approche">Approche</a>
+        <a href="#contrats">Contrats</a>
+        <a href="#engagements">Engagements</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-dark nav-cta" href="#contact">Demander un audit</a>
     </nav>
   </div>
 </header>
@@ -80,35 +84,27 @@
 
 <section id="top" class="container hero">
   <div class="hero-copy">
-    <p class="hero-tag reveal d1">
-      <span class="pulse-dot" aria-hidden="true"></span>
-      <span>Services informatiques · Neuchâtel</span>
-    </p>
-    <h1 class="hero-title reveal d2">L'informatique de votre entreprise, entre de bonnes mains.</h1>
-    <p class="hero-lead reveal d3">Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région. Un seul interlocuteur, des réponses claires.</p>
-    <div class="hero-actions reveal d4">
+    <h1 class="hero-title reveal d1">L'informatique de votre entreprise, entre de bonnes mains.</h1>
+    <p class="hero-lead reveal d2">Cybersécurité, postes de travail, hébergement et sites web pour les PME et indépendants de la région. Un seul interlocuteur, des réponses claires.</p>
+    <div class="hero-actions reveal d3">
       <a class="btn btn-accent btn-lg" href="#contact">Demander un audit gratuit
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a class="btn btn-outline btn-lg" href="#services">Voir nos services</a>
     </div>
   </div>
 
-  <figure class="status-card reveal d5" aria-label="Exemple d'état d'un parc informatique">
-    <div class="status-scan" aria-hidden="true"></div>
+  <figure class="status-card reveal d4" aria-label="Exemple d'état d'un parc informatique">
     <div class="status-bar">
       <div class="status-dots" aria-hidden="true"><span></span><span></span><span></span></div>
       <figcaption class="status-caption">état du parc — exemple</figcaption>
     </div>
     <div class="status-summary">
       <span class="status-summary-label">Protection globale</span>
-      <div class="status-summary-value">
-        <span>Sous contrôle</span>
-        <span class="cursor" aria-hidden="true"></span>
-      </div>
+      <span class="status-summary-value">Sous contrôle</span>
     </div>
     <svg class="status-chart" viewBox="0 0 440 110" width="100%" height="110" preserveAspectRatio="none" aria-hidden="true">
-      <path class="chart-line" d="M0 80 C 40 78, 60 60, 100 64 S 160 40, 200 46 S 260 30, 300 34 S 370 20, 440 22" fill="none" stroke-width="2"/>
+      <path class="chart-line" d="M0 80 C 40 78, 60 60, 100 64 S 160 40, 200 46 S 260 30, 300 34 S 370 20, 440 22" pathLength="100"/>
       <line class="chart-base" x1="0" y1="96" x2="440" y2="96" stroke-width="1"/>
     </svg>
     <ul class="status-list">
@@ -238,41 +234,111 @@ FIN RÉFÉRENCES -->
   </div>
 </section>
 
-<section id="engagements" class="engagements">
-  <div class="container section engagements-inner">
-    <div class="engagements-head reveal">
-      <span class="eyebrow">03 — Engagements</span>
-      <h2 class="h2">Ce sur quoi vous pouvez compter.</h2>
+<!-- CONTRATS DE SUPPORT — contenu proposé, à valider avant la mise en ligne :
+     remplacer chaque [XX] par le prix de départ et ajuster les délais et les prestations. -->
+<section id="contrats" class="container section">
+  <div class="section-head">
+    <div class="section-title reveal">
+      <span class="eyebrow">03 — Contrats</span>
+      <h2 class="h2">Un contrat de support à la mesure de votre entreprise.</h2>
     </div>
-    <ul class="pillars">
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle class="ico-accent" cx="12" cy="9.5" r="2.5" stroke-width="1.6"/></svg>
-        <h3>Local</h3>
-        <p>Basés à La Chaux-de-Fonds, nous nous déplaçons chez vous quand il le faut.</p>
-      </li>
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="ico-accent" d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.3c1.8.9 3 2.9 3 5.7" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <h3>Direct</h3>
-        <p>Vous parlez à ceux qui font le travail. Pas de centrale d'appels, pas d'intermédiaire.</p>
-      </li>
-      <li class="pillar reveal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path class="ico-accent" d="M8 8h8M8 12h8M8 16h5" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <h3>Transparent</h3>
-        <p>Devis annoncé avant chaque intervention et explications sans jargon.</p>
-      </li>
-    </ul>
-    <!-- TÉMOIGNAGE — masqué en attendant un vrai avis client. Pour l'afficher, retirer les balises de commentaire.
-    <figure class="testimonial reveal">
-      <blockquote>« [Témoignage d'un client satisfait, une ou deux phrases sur le sérieux et la réactivité.] »</blockquote>
-      <figcaption>[Prénom Nom] — [Entreprise, ville]</figcaption>
-    </figure>
-    -->
+    <p class="section-intro reveal">Trois niveaux de suivi pour garder vos systèmes à jour, sécurisés et sauvegardés, sans mauvaise surprise.</p>
+  </div>
+
+  <ul class="plans reveal">
+    <li class="plan">
+      <div class="plan-head">
+        <h3 class="plan-name">Standard</h3>
+        <p class="plan-desc">L'essentiel pour les indépendants et les petites équipes.</p>
+      </div>
+      <p class="plan-price"><span>dès</span> <span class="plan-price-amount">[XX] CHF</span> <span>par mois</span></p>
+      <div class="plan-body">
+        <p class="plan-includes">Inclus</p>
+        <ul class="plan-features">
+          <li>Assistance à distance, du lundi au vendredi</li>
+          <li>Réponse sous 24 heures ouvrées</li>
+          <li>Mises à jour des postes et antivirus géré</li>
+          <li>Contrôle régulier des sauvegardes</li>
+          <li>Interventions sur site sur devis</li>
+        </ul>
+      </div>
+      <a class="btn btn-outline plan-cta" href="#contact" data-plan="Standard">Demander le contrat Standard</a>
+    </li>
+    <li class="plan">
+      <div class="plan-head">
+        <h3 class="plan-name">Silver</h3>
+        <p class="plan-desc">Pour les PME qui préfèrent anticiper plutôt que réparer.</p>
+      </div>
+      <p class="plan-price"><span>dès</span> <span class="plan-price-amount">[XX] CHF</span> <span>par mois</span></p>
+      <div class="plan-body">
+        <p class="plan-includes">Tout le contrat Standard, plus</p>
+        <ul class="plan-features">
+          <li>Réponse sous 8 heures ouvrées</li>
+          <li>Gestion du réseau, du pare-feu et des e-mails</li>
+          <li>Sauvegardes chiffrées hors site</li>
+          <li>Bilan de santé du parc chaque trimestre</li>
+        </ul>
+      </div>
+      <a class="btn btn-outline plan-cta" href="#contact" data-plan="Silver">Demander le contrat Silver</a>
+    </li>
+    <li class="plan">
+      <div class="plan-head">
+        <h3 class="plan-name">Gold</h3>
+        <p class="plan-desc">Une prise en charge complète et prioritaire.</p>
+      </div>
+      <p class="plan-price"><span>dès</span> <span class="plan-price-amount">[XX] CHF</span> <span>par mois</span></p>
+      <div class="plan-body">
+        <p class="plan-includes">Tout le contrat Silver, plus</p>
+        <ul class="plan-features">
+          <li>Réponse prioritaire sous 4 heures ouvrées</li>
+          <li>Interventions sur site incluses</li>
+          <li>Surveillance des serveurs et de l'hébergement</li>
+          <li>Audit de sécurité et sensibilisation de vos équipes chaque année</li>
+        </ul>
+      </div>
+      <a class="btn btn-outline plan-cta" href="#contact" data-plan="Gold">Demander le contrat Gold</a>
+    </li>
+  </ul>
+  <p class="plans-note reveal">Chaque contrat est ajusté à la taille de votre parc après l'audit gratuit.</p>
+</section>
+
+<section id="engagements" class="engagements">
+  <div class="container">
+    <div class="engagements-panel">
+      <div class="engagements-head reveal">
+        <span class="eyebrow">04 — Engagements</span>
+        <h2 class="h2">Ce sur quoi vous pouvez compter.</h2>
+      </div>
+      <ul class="pillars">
+        <li class="pillar reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle class="ico-accent" cx="12" cy="9.5" r="2.5" stroke-width="1.6"/></svg>
+          <h3>Local</h3>
+          <p>Basés à La Chaux-de-Fonds, nous nous déplaçons chez vous quand il le faut.</p>
+        </li>
+        <li class="pillar reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="ico-accent" d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.3c1.8.9 3 2.9 3 5.7" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h3>Direct</h3>
+          <p>Vous parlez à ceux qui font le travail. Pas de centrale d'appels, pas d'intermédiaire.</p>
+        </li>
+        <li class="pillar reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path class="ico-accent" d="M8 8h8M8 12h8M8 16h5" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h3>Transparent</h3>
+          <p>Devis annoncé avant chaque intervention et explications sans jargon.</p>
+        </li>
+      </ul>
+      <!-- TÉMOIGNAGE — masqué en attendant un vrai avis client. Pour l'afficher, retirer les balises de commentaire.
+      <figure class="testimonial reveal">
+        <blockquote>« [Témoignage d'un client satisfait, une ou deux phrases sur le sérieux et la réactivité.] »</blockquote>
+        <figcaption>[Prénom Nom] — [Entreprise, ville]</figcaption>
+      </figure>
+      -->
+    </div>
   </div>
 </section>
 
 <section id="contact" class="container section contact">
   <div class="contact-intro reveal">
-    <span class="eyebrow">04 — Contact</span>
+    <span class="eyebrow">05 — Contact</span>
     <h2 class="h2">Parlons de votre infrastructure.</h2>
     <p class="text-lead">Un premier échange pour comprendre vos besoins. Réponse sous 24 heures.</p>
     <div class="contact-list">
@@ -307,7 +373,7 @@ FIN RÉFÉRENCES -->
       <label for="f-msg">Votre besoin</label>
       <textarea id="f-msg" name="message" rows="5" placeholder="Décrivez brièvement votre situation…" required></textarea>
     </div>
-    <button class="btn form-submit" type="submit">Envoyer la demande</button>
+    <button class="btn btn-accent form-submit" type="submit">Envoyer la demande</button>
     <p class="form-status" data-form-status role="status" aria-live="polite"></p>
     <p class="form-note">Vos données restent confidentielles et ne sont jamais partagées. <a href="confidentialite.html">Politique de confidentialité</a></p>
   </form>
